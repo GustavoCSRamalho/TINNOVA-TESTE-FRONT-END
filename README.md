@@ -23,7 +23,7 @@ $ git clone https://github.com/GustavoCSRamalho/TINNOVA-TESTE-FRONT-END.git
 $ cd tinnova-teste-frontend
 
 # Acesse a pasta do projeto no Visual Studio
-$ npm start
+$ npm install && npm start
 
 # TECNOLOGIAS
 
