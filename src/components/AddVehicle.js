@@ -45,6 +45,7 @@ function AddVehicle() {
             setMarca(response.data.marca)
             setVeiculo(response.data.veiculo)
             setVendido(response.data.vendido)
+            alert("Enviado com sucesso!")
         })
                     
     
@@ -66,7 +67,7 @@ function AddVehicle() {
             {fabricantesDeCarros.map(fabricante => (<option key={fabricante} value={fabricante}>{fabricante}</option>))}
         </select>          
         <input type="number" name="ano" id="ano" placeholder="ano do veiculo" onChange={handleInputChange} />
-          <input type="text" name="descricao" id="descricao" placeholder="descricao" onChange={handleInputChange} />
+          <input type="text" name="descricao" id="descricao" placeholder="Década ****" onChange={handleInputChange} />
           <select name="vendido" id="vendido" onChange={handleInputChange}>
             <option value="0">Selecione uma opção</option>
             {vendidoTag.map(vendido => (<option key={vendido} value={vendido}>{vendido === true ? "Vendido" : "Em estoque"}</option>))}

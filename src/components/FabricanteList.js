@@ -31,7 +31,7 @@ function FabricanteList() {
       listaDeFabricantes.map(async  fabricantes =>  {
         await axios.get('http://localhost:8080/veiculos/find?q='+fabricantes).then(response => {
         var tamanho = response.data.length
-        var texto = fabricantes+" -> "+tamanho+""
+        var texto = fabricantes+" -> "+tamanho+" veiculos"
         console.log(texto)
         setCarrosPorFabricante(oldArray => [...oldArray, texto])
         

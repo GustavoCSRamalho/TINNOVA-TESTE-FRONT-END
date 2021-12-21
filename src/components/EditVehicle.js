@@ -97,6 +97,7 @@ function EditVehicle() {
                     setMarca(response.data.marca)
                     setVeiculo(response.data.veiculo)
                     setVendido(response.data.vendido)
+                    alert("Atualizado com sucesso!")
                     
                 })
         }
