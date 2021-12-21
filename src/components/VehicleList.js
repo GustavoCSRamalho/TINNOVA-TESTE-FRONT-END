@@ -34,11 +34,12 @@ function VehicleList() {
 
   return (
       <div>
+      <Link to={"/adicionar"}><h4>Adicionar veiculo</h4></Link>
               <ul>
           {actions.map(acao => (<li key={acao} style={{display:'inline'}}>{acao} </li>))}
         </ul>
         <ul >
-          {nomes.map(nome => (<li key={nome.id}>{nome.veiculo} {nome.marca} {nome.ano} {nome.descricao} {nome.vendido} <Link to={"/edit/"+nome.id}><FaEdit/></Link> <FaTrashAlt onClick={() => deletar(nome.id)}/> </li>))}
+          {nomes.map(nome => (<li key={nome.id}>{nome.veiculo} {nome.marca} {nome.ano} {nome.descricao} {nome.vendido === true ? "Vendido" : "Nao vendido"} <Link to={"/edit/"+nome.id}><FaEdit/></Link> <FaTrashAlt onClick={() => deletar(nome.id)}/> </li>))}
         </ul>
         
       </div>
